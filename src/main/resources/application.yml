@@ -1,4 +1,8 @@
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ninja?useSSL=false
+    username: root
+    password: holamundo7
   jpa:
     show-sql: true
     hibernate:
