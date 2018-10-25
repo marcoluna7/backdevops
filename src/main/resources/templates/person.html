@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Nueva Persona</title>
+</head>
+<body>
+<form action="#" th:action="@{/person/created}" th:object="${person}" method="post">
+	<div>
+		Id: <span th:text="${person.id}"></span>
+		
+	</div>
+	<div>
+		Nombre: <input type="text" th:field="*{name}">
+		<p th:if="${#fields..hasErrors('name')}" th.errors="*{name}">Error en Nombre</p>
+	</div>
+		<br/>
+	<div>
+		Edad: <input type="number" th:field="*{age}" >
+		<p th:if="${#fields..hasErrors('age')}" th.errors="*{age}">Error en edad</p>
+	</div>
+	<br/>
+	<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
