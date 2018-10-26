@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: test
   datasource:
     url: jdbc:mysql://localhost:3306/ninja?useSSL=false
     username: root
@@ -7,3 +9,4 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update      
+         
